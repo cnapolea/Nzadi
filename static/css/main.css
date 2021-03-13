@@ -1,0 +1,478 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+}
+
+body section {
+  overflow: hidden;
+  position: relative;
+}
+
+body .scrollToTop {
+  background-color: black;
+  bottom: 49px;
+  border-radius: 50%;
+  color: #c4a01c;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  position: fixed;
+  right: 14px;
+  -webkit-transform: translateX(180%);
+          transform: translateX(180%);
+  z-index: 2;
+}
+
+body .ScrollToTopShow {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.scrollToTop,
+.ScrollToTopShow {
+  -webkit-transition: ease-out .5s transform;
+  transition: ease-out .5s transform;
+}
+
+.section-header-1,
+.section-header-2 {
+  font-size: 1rem;
+}
+
+.intro-header,
+.icons,
+.service-title,
+.learn-more-btn {
+  font-size: .9rem;
+}
+
+.nav-link,
+.message-ceo,
+.service-description {
+  font-size: .8rem;
+}
+
+.slide-container,
+.info-slide,
+.info-container,
+.bg-video,
+section {
+  width: 100%;
+}
+
+.section-header-2,
+.previous-btn,
+.next-btn {
+  color: #F3C623;
+}
+
+.intro-header,
+.info-container,
+.icons {
+  color: white;
+}
+
+#footer,
+.info-slide,
+.services-mobile {
+  text-align: center;
+}
+
+.nav-item {
+  text-align: right;
+}
+
+#contact-us,
+#footer {
+  background-color: #F3C623;
+  padding-bottom: 0;
+}
+
+.services-mobile {
+  padding-top: 5%;
+}
+
+.section-header-1,
+.section-header-2 {
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 5% 0px 6% 3%;
+  margin: 0;
+}
+
+.section-header-1 {
+  color: black;
+}
+
+.service-title {
+  padding-top: 5%;
+  font-weight: 600;
+}
+
+#title {
+  height: 30%;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding-top: 2%;
+}
+
+#title .bg-video {
+  border-bottom-left-radius: 65%;
+  -webkit-clip-path: circle(92% at 70% 0%);
+          clip-path: circle(92% at 70% 0%);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+#title .intro-header {
+  top: 60%;
+  position: absolute;
+  right: 5%;
+}
+
+#title .navbar-scroll-down,
+#title .navbar-scroll-up,
+#title .navbar {
+  -webkit-transition: linear .5s transform;
+  transition: linear .5s transform;
+}
+
+#title .navbar {
+  background-color: transparent;
+  padding: 3% 7%;
+  position: fixed;
+  width: 100%;
+}
+
+#title .navbar-scroll-down {
+  -webkit-transform: translateY(-500px);
+          transform: translateY(-500px);
+}
+
+#title .navbar-scroll-up {
+  background-color: black;
+  position: fixed;
+  z-index: 2;
+}
+
+#title .section-header-1 {
+  padding-top: 0;
+}
+
+.navbar .navbar-brand {
+  background-color: #ffffff17;
+  color: #F3C623;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 4px 11px;
+}
+
+.navbar .nav-link {
+  color: #F3C623;
+  padding-right: 5%;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(243, 198, 35, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  height: 1.2rem;
+}
+
+.navbar .navbar-nav {
+  background: #171718e0;
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+#products-and-services {
+  padding-bottom: 10%;
+}
+
+#products-and-services .learn-more-btn {
+  background: #F3C623;
+  color: #000;
+  width: 60%;
+  height: 15%;
+  padding-top: 3px;
+}
+
+.icons {
+  padding: 5%;
+  border-radius: 50%;
+  border: #F3C623 1px solid;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+#team {
+  background-color: #000;
+  border-top-right-radius: 35%;
+  padding-bottom: 7%;
+}
+
+#team .info-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#team .team-title {
+  padding-bottom: 10%;
+}
+
+.info-slide {
+  padding-top: 2%;
+}
+
+.info-slide .info-container {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.info-slide .info-container .icons {
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.15);
+          box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.15);
+}
+
+.previous-btn,
+.next-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  position: absolute;
+  top: 38%;
+}
+
+.next-btn {
+  right: 10%;
+}
+
+.previous-btn {
+  left: 10%;
+}
+
+#contact-us .social {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 15% 5%;
+}
+
+.socials-link {
+  color: #000;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
+}
+
+.site:hover {
+  color: #0000008c;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-username {
+  margin-left: 8px;
+}
+
+.message-ceo {
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.ceo-signature {
+  font-family: 'Cookie', cursive;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+#footer .copy-right {
+  font-size: .7rem;
+  margin-bottom: 0;
+  padding: 1%;
+}
+
+@media (min-width: 375px) {
+  body #title {
+    height: 35%;
+  }
+  body #title .intro-header {
+    top: 65%;
+  }
+}
+
+@media (min-width: 425px) {
+  body #title {
+    height: 40%;
+  }
+}
+
+@media (min-width: 728px) {
+  body .scrollToTop {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 728px) and (min-width: 728px) {
+  body #title {
+    height: 70%;
+  }
+}
+
+@media (min-width: 728px) {
+  body .navbar-toggler-icon {
+    height: 2rem;
+  }
+  body .navbar-brand {
+    font-size: 1.3rem;
+  }
+  body .intro-header,
+  body .section-header-1,
+  body .section-header-2 {
+    font-size: 1.5rem;
+  }
+  body .nav-link,
+  body .message-ceo,
+  body .service-description,
+  body .learn-more-btn {
+    font-size: 1rem;
+  }
+  body #products-and-services .section-header-1 {
+    padding-bottom: 4%;
+  }
+  body .service-title {
+    padding-top: 3%;
+  }
+  body .service-title,
+  body .social-username {
+    font-size: 1.2rem;
+  }
+  body .learn-more-btn {
+    padding-top: 6px;
+  }
+  body .services-mobile {
+    padding: 5% 5% 0;
+  }
+  body .social-media-icons {
+    font-size: 2rem;
+  }
+  body .social-media-container {
+    padding-left: 29px;
+  }
+  body #contact-us .section-header-1 {
+    padding-bottom: 7%;
+  }
+  body #contact-us .message-ceo-container {
+    padding-right: 0;
+    text-align: right;
+  }
+  body #contact-us .message-ceo {
+    font-size: 1.3rem;
+  }
+  body #contact-us .ceo-signature {
+    font-size: 1.4rem;
+  }
+  body #footer .copy-right {
+    font-size: .9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body .nav-link,
+  body .social-username {
+    font-size: 1.5rem;
+  }
+  body .section-header-1,
+  body .section-header-2 {
+    font-size: 1.8rem;
+  }
+  body .icons,
+  body .next-btn,
+  body .previous-btn {
+    font-size: 4rem;
+  }
+  body #title {
+    height: 90%;
+    padding-top: 0;
+  }
+  body #title .navbar-brand,
+  body #title .intro-header {
+    font-size: 2rem;
+  }
+  body #title .navbar-nav {
+    background-color: transparent;
+  }
+  body #title .nav-link {
+    padding-bottom: 0cm;
+    -webkit-transition: ease-in .2s;
+    transition: ease-in .2s;
+  }
+  body #title .nav-link:hover {
+    border-bottom: 2px solid;
+    padding-bottom: 1px;
+  }
+  body #products-and-services .services-mobile {
+    padding: 6% 2% 0;
+  }
+  body #products-and-services .service-title {
+    font-size: 1.3rem;
+    margin: 0;
+    padding-top: 4%;
+  }
+  body #products-and-services .service-description,
+  body #products-and-services .learn-more-btn {
+    font-size: 1.1rem;
+  }
+  body #products-and-services .service-description {
+    margin: 0;
+    padding: 3% 0 6%;
+  }
+  body #products-and-services .learn-more-btn {
+    width: 45%;
+    height: 15%;
+    padding-top: 6px;
+    -webkit-transition: ease-out .7s;
+    transition: ease-out .7s;
+  }
+  body #products-and-services .learn-more-btn:hover {
+    background-color: #000;
+    color: #F3C623;
+  }
+  body #team .next-btn,
+  body #team .previous-btn {
+    top: 45%;
+  }
+  body #contact-us .message-ceo-container .message-ceo,
+  body #contact-us .message-ceo-container .ceo-signature {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  body #title {
+    height: 115%;
+  }
+}
+
+@media (min-width: 1650px) {
+  body #title {
+    height: 113%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
