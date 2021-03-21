@@ -46,20 +46,6 @@ body .ScrollToTopShow {
   padding-top: 2%;
 }
 
-@media (min-width: 1024px) {
-  #title {
-    height: 90%;
-    padding-top: 0;
-  }
-  #title .intro-header {
-    font-size: 2rem;
-  }
-  #title .nav-link:hover {
-    border-bottom: 2px solid;
-    padding-bottom: 1px;
-  }
-}
-
 #title nav .navbar {
   background-color: #393738;
   padding: 3% 7%;
@@ -89,6 +75,10 @@ body .ScrollToTopShow {
   }
 }
 
+#title nav .nav-item {
+  text-align: right;
+}
+
 #title nav .nav-link {
   color: #F3C623;
   font-size: .8rem;
@@ -108,6 +98,11 @@ body .ScrollToTopShow {
     -webkit-transition: ease .1s;
     transition: ease .1s;
   }
+}
+
+#title nav .nav-link:hover {
+  border-bottom: 2px solid;
+  padding-bottom: 1px;
 }
 
 #title nav .navbar-toggler-icon {
@@ -144,7 +139,6 @@ body .ScrollToTopShow {
 #title nav .nav-notification {
   color: red;
   margin-left: 1%;
-  font-size: .6rem;
 }
 
 #title nav .row {
@@ -152,6 +146,16 @@ body .ScrollToTopShow {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+}
+
+@media (min-width: 1024px) {
+  #title {
+    height: 90%;
+    padding-top: 0;
+  }
+  #title .intro-header {
+    font-size: 2rem;
+  }
 }
 
 #title .bg-video {
@@ -169,7 +173,6 @@ body .ScrollToTopShow {
   right: 5%;
 }
 
-#title .navbar-scroll-down,
 #title .navbar-scroll-up,
 #title .navbar-scroll-down {
   -webkit-transform: translateY(-500px);
@@ -233,10 +236,6 @@ section {
 .info-slide,
 .services-mobile {
   text-align: center;
-}
-
-.nav-item {
-  text-align: right;
 }
 
 #contact-us,
@@ -406,12 +405,6 @@ section {
 }
 
 @media (min-width: 728px) {
-  body .navbar-toggler-icon {
-    height: 2rem;
-  }
-  body .navbar-brand {
-    font-size: 1.3rem;
-  }
   body .intro-header,
   body .section-header-1,
   body .section-header-2 {
