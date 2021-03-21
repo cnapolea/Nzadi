@@ -1,3 +1,32 @@
+// Variables start
+$colors: (primary: #F3C623,
+    secondary: #000,
+    bg-color: #fff,
+    dropdown-color:#393738,
+    notification: red);
+
+$fonts: (
+    font-a-laptop: 1.1rem
+);
+
+
+// Iphone widths
+
+
+// Android widths
+
+
+// tablets
+$laptop-width: 1024px;
+$laptop-l-width: 1440px;
+$laptop-xl-width: 1650px;
+$mobile-m:375px;
+$mobile-l:425px;
+$tablet-width: 728px;
+
+// Variables end 
+
+
 // mixins start
 
 @mixin respond($breakpoint) {
@@ -45,23 +74,6 @@
 
 // mixins end
 
-$colors: (primary: #F3C623,
-    secondary: #000,
-    bg-color: #fff);
-
-$mobile-navbar: (brand-font-size: 1.1rem,
-    items-color: map-get($colors, primary),
-    navbar-bg-color: transparent,
-);
-
-$laptop-width: 1024px;
-$laptop-l-width: 1440px;
-$laptop-xl-width: 1650px;
-$mobile-m:375px;
-$mobile-l:425px;
-$tablet-width: 728px;
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -105,6 +117,75 @@ body {
 
 }
 
+// Title Section Start
+
+
+
+#title {
+    // Navbar Start
+     @import './navbar';
+    //NavBar End
+    
+    @include respond(laptop) {
+
+        height: 90%;
+        padding-top: 0;
+
+        .intro-header {
+            font-size: 2rem;
+        }
+
+       
+    
+
+    height: 30%;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding-top: 2%;
+    
+
+    .bg-video {
+        border-bottom-left-radius: 65%;
+        clip-path: circle(92% at 70% 0%);
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    .intro-header {
+        top: 60%;
+        position: absolute;
+        right: 5%;
+    }
+
+    .navbar-scroll-down,
+    .navbar-scroll-up,
+   
+    .navbar-scroll-down {
+        transform: translateY(-500px);
+    }
+
+    .navbar-scroll-up {
+        background-color: black;
+        position: fixed;
+        z-index: 2;
+    }
+
+    .section-header-1 {
+        padding-top: 0;
+    }
+
+    @include respond(mobile_s) {
+        height: 23%;
+    }
+
+    
+
+}
+
+// Title Section End
+
+
 // Animation
 .scrollToTop,
 .ScrollToTopShow {
@@ -125,7 +206,6 @@ body {
     font-size: .9rem;
 }
 
-.nav-link,
 .message-ceo,
 .service-description {
     font-size: .8rem;
@@ -169,15 +249,6 @@ section {
     text-align: center;
 }
 
-.nav-item {
-    text-align: right;
-}
-
-// Alignment End
-
-
-
-// Section Start
 #contact-us,
 #footer {
     background-color: map-get($colors, primary);
@@ -217,94 +288,7 @@ section {
 
 
 
-// Title Section Start
 
-#title {
-    height: 30%;
-    margin-bottom: 0;
-    overflow: hidden;
-    padding-top: 2%;
-
-    .bg-video {
-        border-bottom-left-radius: 65%;
-        clip-path: circle(92% at 70% 0%);
-        position: absolute;
-        top: 0;
-        z-index: -1;
-    }
-
-    .intro-header {
-        top: 60%;
-        position: absolute;
-        right: 5%;
-    }
-
-    .navbar-scroll-down,
-    .navbar-scroll-up,
-    .navbar {
-        transition: linear .5s transform;
-    }
-
-    .navbar {
-        background-color: map-get($mobile-navbar, navbar-bg-color);
-        padding: 3% 7%;
-        position: fixed;
-        width: 100%;
-    }
-
-    .navbar-scroll-down {
-        transform: translateY(-500px);
-    }
-
-    .navbar-scroll-up {
-        background-color: black;
-        position: fixed;
-        z-index: 2;
-    }
-
-    .section-header-1 {
-        padding-top: 0;
-    }
-
-    @include respond(mobile_s) {
-        height: 23%;
-    }
-
-}
-
-.navbar {
-
-    .navbar-brand {
-        background-color: #ffffff17;
-        color: map-get($mobile-navbar, items-color);
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 4px 11px;
-    }
-
-
-
-
-    .nav-link {
-        color: map-get($mobile-navbar, items-color);
-        padding-right: 5%;
-    }
-
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(243, 198, 35, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-        height: 1.2rem;
-    }
-
-    .navbar-nav {
-        background: #171718e0;
-        margin-top: 5px;
-        position: relative;
-        z-index: 1;
-    }
-
-}
-
-// Title Section End
 
 // Products & Servies Section Start
 
@@ -466,21 +450,12 @@ body {
             }
         }
 
-        .navbar-toggler-icon {
-            height: 2rem;
-        }
-
-        .navbar-brand {
-            font-size: 1.3rem;
-        }
-
         .intro-header,
         .section-header-1,
         .section-header-2 {
             font-size: 1.5rem;
         }
 
-        .nav-link,
         .message-ceo,
         .service-description,
         .learn-more-btn {
@@ -543,10 +518,9 @@ body {
     }
 
     @include respond(laptop) {
-
-        .nav-link,
+       
         .social-username {
-            font-size: 1.5rem;
+            font-size: 1.45rem;
         }
 
         .section-header-1,
@@ -558,34 +532,6 @@ body {
         .next-btn,
         .previous-btn {
             font-size: 4rem;
-        }
-
-        #title {
-            height: 90%;
-            padding-top: 0;
-
-
-            .navbar-brand,
-            .intro-header {
-                font-size: 2rem;
-            }
-
-            .navbar-nav {
-                background-color: transparent;
-
-            }
-
-            .nav-link {
-                padding-bottom: 0cm;
-                transition: ease-in .2s;
-            }
-
-            .nav-link:hover {
-                border-bottom: 2px solid;
-                padding-bottom: 1px;
-            }
-
-
         }
 
         #products-and-services {
