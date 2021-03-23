@@ -1,0 +1,76 @@
+#title {
+
+    // Navbar Start
+    @import './navbar';
+    //NavBar End
+    
+    height: 35%;
+    margin-bottom: 0;
+    overflow: hidden;
+    
+    
+    .intro-header {
+        top: 52%;
+        position: absolute;
+        right: 5%;
+        z-index: 2;
+    }
+
+    .bg-video {
+        border-bottom-left-radius: 65%;
+        clip-path: circle(92% at 70% 0%);
+        position: absolute;
+        top: 15%;
+        z-index: 1;
+    }
+
+
+    .navbar-scroll-up,
+    .navbar-scroll-down {
+        transform: translateY(-500px);
+    }
+
+    .navbar-scroll-up {
+        background-color: black;
+        position: fixed;
+        z-index: 2;
+    }
+
+    @include respond(mobile_m) {
+        height: 44%;
+    }
+
+    @include respond(tablet) {
+        height: 75%;
+
+        .bg-video {
+            top: 11%;
+        }
+    }
+
+    @include respond(laptop) {
+        height: 93%;
+        padding-top: 0;
+        
+        .bg-video {
+            top: 8%;
+        }
+
+        .intro-header {
+            font-size: 2rem;
+        }
+    }
+
+    @include respond(laptop_l) {
+        height: 120%;
+    }
+
+    @include respond(laptop_xl) {
+        height: 100%;
+        
+        .bg-video {
+            top: 5%;
+        }
+    }
+
+}

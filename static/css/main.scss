@@ -6,7 +6,8 @@ $colors: (primary: #F3C623,
     notification: red);
 
 $fonts: (
-    font-a-laptop: 1.1rem
+    font-a-laptop: 1.1rem,
+    notification: .8rem
 );
 
 
@@ -118,72 +119,7 @@ body {
 }
 
 // Title Section Start
-
-
-
-#title {
-    
-     // Navbar Start
-     @import './navbar';
-    //NavBar End
-
-    @include respond(laptop) {
-
-        height: 90%;
-        padding-top: 0;
-
-        .intro-header {
-            font-size: 2rem;
-        }
-
-        
-    }
-    
-   
-
-    height: 30%;
-    margin-bottom: 0;
-    overflow: hidden;
-    padding-top: 2%;
-    
-
-    .bg-video {
-        border-bottom-left-radius: 65%;
-        clip-path: circle(92% at 70% 0%);
-        position: absolute;
-        top: 0;
-        z-index: -1;
-    }
-
-    .intro-header {
-        top: 60%;
-        position: absolute;
-        right: 5%;
-    }
-
-    .navbar-scroll-up,
-    .navbar-scroll-down {
-        transform: translateY(-500px);
-    }
-
-    .navbar-scroll-up {
-        background-color: black;
-        position: fixed;
-        z-index: 2;
-    }
-
-    .section-header-1 {
-        padding-top: 0;
-    }
-
-    @include respond(mobile_s) {
-        height: 23%;
-    }
-
-    
-
-}
-
+@import './title';
 // Title Section End
 
 
@@ -430,30 +366,10 @@ section {
 
 body {
 
-    #title {
-        @include respond(mobile_m) {
-            height: 35%;
-
-            .intro-header {
-                top: 65%;
-            }
-        }
-
-        @include respond(mobile_l) {
-            height: 40%;
-        }
-    }
-
     @include respond(tablet) {
 
         .scrollToTop {
             font-size: 2rem;
-        }
-
-        #title {
-            @include respond(tablet) {
-                height: 70%;
-            }
         }
 
         .intro-header,
@@ -595,19 +511,6 @@ body {
         }
     }
 
-    @include respond(laptop_l) {
-        #title {
-            height: 115%;
-        }
-
-    }
-
-    @include respond(laptop_xl) {
-        #title {
-            height: 113%;
-        }
-
-    }
 }
 
 // small mobile responsiveness end

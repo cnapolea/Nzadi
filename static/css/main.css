@@ -40,10 +40,14 @@ body .ScrollToTopShow {
 }
 
 #title {
-  height: 30%;
+  height: 35%;
   margin-bottom: 0;
   overflow: hidden;
-  padding-top: 2%;
+}
+
+#title nav {
+  background-color: black;
+  z-index: 3;
 }
 
 #title nav .ml-auto {
@@ -51,7 +55,6 @@ body .ScrollToTopShow {
 }
 
 #title nav .navbar {
-  background-color: #393738;
   padding: 3% 7%;
   position: fixed;
   -webkit-transition: linear .5s transform;
@@ -86,7 +89,7 @@ body .ScrollToTopShow {
 #title nav .nav-link {
   color: #F3C623;
   font-size: .8rem;
-  padding-right: 5%;
+  padding: 1%  3% 2% 0;
 }
 
 @media (min-width: 728px) {
@@ -155,6 +158,11 @@ body .ScrollToTopShow {
 #title nav .nav-notification {
   color: red;
   margin-left: 1%;
+  font-size: 0.8rem;
+}
+
+#title nav .navbar-collapse {
+  background-color: black;
 }
 
 @media (min-width: 1024px) {
@@ -172,14 +180,11 @@ body .ScrollToTopShow {
   width: 100%;
 }
 
-@media (min-width: 1024px) {
-  #title {
-    height: 90%;
-    padding-top: 0;
-  }
-  #title .intro-header {
-    font-size: 2rem;
-  }
+#title .intro-header {
+  top: 52%;
+  position: absolute;
+  right: 5%;
+  z-index: 2;
 }
 
 #title .bg-video {
@@ -187,14 +192,8 @@ body .ScrollToTopShow {
   -webkit-clip-path: circle(92% at 70% 0%);
           clip-path: circle(92% at 70% 0%);
   position: absolute;
-  top: 0;
-  z-index: -1;
-}
-
-#title .intro-header {
-  top: 60%;
-  position: absolute;
-  right: 5%;
+  top: 15%;
+  z-index: 1;
 }
 
 #title .navbar-scroll-up,
@@ -209,8 +208,47 @@ body .ScrollToTopShow {
   z-index: 2;
 }
 
-#title .section-header-1 {
-  padding-top: 0;
+@media (min-width: 375px) {
+  #title {
+    height: 44%;
+  }
+}
+
+@media (min-width: 728px) {
+  #title {
+    height: 75%;
+  }
+  #title .bg-video {
+    top: 11%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #title {
+    height: 93%;
+    padding-top: 0;
+  }
+  #title .bg-video {
+    top: 8%;
+  }
+  #title .intro-header {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  #title {
+    height: 120%;
+  }
+}
+
+@media (min-width: 1650px) {
+  #title {
+    height: 100%;
+  }
+  #title .bg-video {
+    top: 5%;
+  }
 }
 
 .scrollToTop,
@@ -401,34 +439,10 @@ section {
   padding: 1%;
 }
 
-@media (min-width: 375px) {
-  body #title {
-    height: 35%;
-  }
-  body #title .intro-header {
-    top: 65%;
-  }
-}
-
-@media (min-width: 425px) {
-  body #title {
-    height: 40%;
-  }
-}
-
 @media (min-width: 728px) {
   body .scrollToTop {
     font-size: 2rem;
   }
-}
-
-@media (min-width: 728px) and (min-width: 728px) {
-  body #title {
-    height: 70%;
-  }
-}
-
-@media (min-width: 728px) {
   body .intro-header,
   body .section-header-1,
   body .section-header-2 {
@@ -526,18 +540,6 @@ section {
   body #contact-us .message-ceo-container .message-ceo,
   body #contact-us .message-ceo-container .ceo-signature {
     font-size: 2rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  body #title {
-    height: 115%;
-  }
-}
-
-@media (min-width: 1650px) {
-  body #title {
-    height: 113%;
   }
 }
 /*# sourceMappingURL=main.css.map */
