@@ -1,4 +1,9 @@
 nav {
+
+    .ml-auto {
+        margin-left: 0 !important;
+    }
+
     .navbar {
         background-color: map-get($colors, dropdown-color);
         padding: 3% 7%;
@@ -37,9 +42,13 @@ nav {
         }
 
         @include respond(laptop) {
-            font-size: 1.3rem;
+            font-size: .9rem;
             padding: 0;
             transition: ease .1s;
+        
+        }
+        @include respond(laptop_l) {
+            font-size: 1.1rem;
         }
 
 
@@ -75,6 +84,9 @@ nav {
 
     .nav-item {
         @include respond(laptop) {
+            margin-right: 1.1%;
+        }
+        @include respond(laptop_l) {
             margin-right: 3%;
         }
     }
@@ -83,6 +95,12 @@ nav {
         color: map-get($colors, notification);
         margin-left: 1%;
         font-size: map-get($fonts, notification);
+    }
+
+    .navbar-collapse {
+        @include respond(laptop) {
+            justify-content: center;
+        }
     }
 
     .row {
