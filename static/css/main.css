@@ -181,6 +181,7 @@ body .ScrollToTopShow {
 }
 
 #title .intro-header {
+  font-size: 1rem;
   top: 52%;
   position: absolute;
   right: 5%;
@@ -244,11 +245,51 @@ body .ScrollToTopShow {
 
 @media (min-width: 1650px) {
   #title {
-    height: 100%;
+    height: 115%;
   }
   #title .bg-video {
     top: 5%;
   }
+}
+
+.previous-btn,
+.next-btn {
+  color: #F3C623;
+}
+
+.learn-more-btn {
+  background: #F3C623;
+  color: #000;
+  width: 60%;
+  height: 15%;
+  padding-top: 3px;
+}
+
+.previous-btn,
+.next-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  position: absolute;
+  top: 38%;
+}
+
+.next-btn {
+  right: 10%;
+}
+
+.previous-btn {
+  left: 10%;
+}
+
+.slide-left {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.slide-right {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .scrollToTop,
@@ -282,9 +323,7 @@ section {
   width: 100%;
 }
 
-.section-header-2,
-.previous-btn,
-.next-btn {
+.section-header-2 {
   color: #F3C623;
 }
 
@@ -331,14 +370,6 @@ section {
   padding-bottom: 10%;
 }
 
-#products-and-services .learn-more-btn {
-  background: #F3C623;
-  color: #000;
-  width: 60%;
-  height: 15%;
-  padding-top: 3px;
-}
-
 .icons {
   padding: 5%;
   border-radius: 50%;
@@ -370,29 +401,16 @@ section {
 .info-slide .info-container {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-transition: -webkit-transform ease-out 1s;
+  transition: -webkit-transform ease-out 1s;
+  transition: transform ease-out 1s;
+  transition: transform ease-out 1s, -webkit-transform ease-out 1s;
 }
 
 .info-slide .info-container .icons {
   background-color: white;
   -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.15);
           box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.15);
-}
-
-.previous-btn,
-.next-btn {
-  background-color: transparent;
-  border: none;
-  font-size: 3rem;
-  position: absolute;
-  top: 38%;
-}
-
-.next-btn {
-  right: 10%;
-}
-
-.previous-btn {
-  left: 10%;
 }
 
 #contact-us .social {

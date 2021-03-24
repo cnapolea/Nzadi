@@ -7,14 +7,9 @@ $colors: (primary: #F3C623,
 
 $fonts: (
     font-a-laptop: 1.1rem,
-    notification: .8rem
+    notification: .8rem,
+    header-sm: 1rem
 );
-
-
-// Iphone widths
-
-
-// Android widths
 
 
 // tablets
@@ -109,19 +104,20 @@ body {
         transform: translateX(180%);
         z-index: 2;
     }
-
+    
     .ScrollToTopShow {
         transform: translateX(0%);
     }
-        
     
-
+    
+    
 }
 
 // Title Section Start
 @import './title';
 // Title Section End
 
+@import './buttons';
 
 // Animation
 .scrollToTop,
@@ -133,7 +129,7 @@ body {
 // Similar font sizes
 .section-header-1,
 .section-header-2 {
-    font-size: 1rem;
+    font-size: map-get($fonts, header-sm);
 }
 
 .intro-header,
@@ -164,9 +160,7 @@ section {
 
 
 // Same color start
-.section-header-2,
-.previous-btn,
-.next-btn {
+.section-header-2 {
     color: map-get($colors, primary);
 }
 
@@ -235,16 +229,7 @@ section {
 // Products & Servies Section Start
 
 #products-and-services {
-
     padding-bottom: 10%;
-
-    .learn-more-btn {
-        background: map-get($colors, primary);
-        color: map-get($colors, secondary);
-        width: 60%;
-        height: 15%;
-        padding-top: 3px;
-    }
 }
 
 .icons {
@@ -274,6 +259,7 @@ section {
         padding-bottom: 10%;
     }
 
+
 }
 
 .info-slide {
@@ -282,6 +268,7 @@ section {
 
     .info-container {
         flex-shrink: 0;
+        transition: transform ease-out 1s;
 
         .icons {
             background-color: white;
@@ -290,22 +277,7 @@ section {
     }
 }
 
-.previous-btn,
-.next-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 3rem;
-    position: absolute;
-    top: 38%;
-}
 
-.next-btn {
-    right: 10%;
-}
-
-.previous-btn {
-    left: 10%;
-}
 
 // Team Section End
 
