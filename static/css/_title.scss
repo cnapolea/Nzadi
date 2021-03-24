@@ -4,14 +4,14 @@
     @import './navbar';
     //NavBar End
     
-    height: 35%;
+    height: 25%;
     margin-bottom: 0;
     overflow: hidden;
-    
+    padding-top: 0;
     
     .intro-header {
         font-size: map-get($fonts, header-sm);
-        top: 52%;
+        top: 48%;
         position: absolute;
         right: 5%;
         z-index: 2;
@@ -38,23 +38,32 @@
     }
 
     @include respond(mobile_m) {
-        height: 44%;
+        height: 53%;
+        
+        .bg-video {
+            top: 8%;
+        }
+
+        .intro-header {
+            top: 30%;
+        }
+
     }
 
     @include respond(tablet) {
-        height: 75%;
+        height: 70%;
 
         .bg-video {
-            top: 11%;
+            top: 7%;
         }
     }
 
     @include respond(laptop) {
-        height: 93%;
-        padding-top: 0;
+        height: 100%;
+        
         
         .bg-video {
-            top: 8%;
+            top: 5%;
         }
 
         .intro-header {
@@ -63,11 +72,11 @@
     }
 
     @include respond(laptop_l) {
-        height: 120%;
+        height: 100%;
     }
 
     @include respond(laptop_xl) {
-        height: 115%;
+        height: 122%;
 
         .bg-video {
             top: 5%;

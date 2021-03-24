@@ -32,11 +32,13 @@ nav {
 
     .nav-item {
         text-align: right;
+        margin-right: 1.3%;
     }
 
     .nav-link {
         color: map-get($colors, primary);
         font-size: .8rem;
+        margin-right: 1.1%;
         padding: 1%  3% 2% 0;
 
         @include respond(tablet) {
@@ -72,22 +74,19 @@ nav {
     }
 
     .navbar-nav {
-        background: #171718e0;
+        // background: #171718e0;
+        background-color: transparent;
         margin-top: 5px;
         position: relative;
+        white-space: nowrap;
         z-index: 1;
         
         @include respond(laptop) {
-            background-color: transparent;
             font-size: map-get($fonts, font-a-nav);
-            white-space: nowrap;
         }
     }
 
     .nav-item {
-        @include respond(laptop) {
-            margin-right: 1.1%;
-        }
         @include respond(laptop_l) {
             margin-right: 3%;
         }

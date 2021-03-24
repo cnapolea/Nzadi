@@ -40,9 +40,10 @@ body .ScrollToTopShow {
 }
 
 #title {
-  height: 35%;
+  height: 25%;
   margin-bottom: 0;
   overflow: hidden;
+  padding-top: 0;
 }
 
 #title nav {
@@ -130,17 +131,11 @@ body .ScrollToTopShow {
 }
 
 #title nav .navbar-nav {
-  background: #171718e0;
   margin-top: 5px;
   position: relative;
   z-index: 1;
-}
-
-@media (min-width: 1024px) {
-  #title nav .navbar-nav {
-    background-color: transparent;
-    white-space: nowrap;
-  }
+  white-space: nowrap;
+  background-color: transparent;
 }
 
 @media (min-width: 1024px) {
@@ -211,13 +206,13 @@ body .ScrollToTopShow {
 
 @media (min-width: 375px) {
   #title {
-    height: 44%;
+    height: 34%;
   }
 }
 
 @media (min-width: 728px) {
   #title {
-    height: 75%;
+    height: 55%;
   }
   #title .bg-video {
     top: 11%;
@@ -226,8 +221,7 @@ body .ScrollToTopShow {
 
 @media (min-width: 1024px) {
   #title {
-    height: 93%;
-    padding-top: 0;
+    height: 55%;
   }
   #title .bg-video {
     top: 8%;
@@ -239,13 +233,13 @@ body .ScrollToTopShow {
 
 @media (min-width: 1440px) {
   #title {
-    height: 120%;
+    height: 100%;
   }
 }
 
 @media (min-width: 1650px) {
   #title {
-    height: 115%;
+    height: 100%;
   }
   #title .bg-video {
     top: 5%;
