@@ -37,18 +37,31 @@
         z-index: 2;
     }
 
-    @include respond(mobile_m) {
-        height: 30%;
+    @include respond(iphone5) {
+        height: 50%;
+
+    }
+
+    @include respond(galaxyS10) {
+        height: 40%;
+        
+        .bg-video {
+            top: 13%;
+        }
+    }
+
+    @include respond(iphone11) {
+        height: 40%;
         
         .bg-video {
             top: 8%;
         }
 
         .intro-header {
-            top: 30%;
+            top: 55%;
         }
-
     }
+
 
     @include respond(mobile_l) {
         height: 35%;

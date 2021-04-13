@@ -8,16 +8,22 @@ $colors: (primary: #F3C623,
 $fonts: (
     font-a-laptop: 1.1rem,
     notification: .8rem,
-    header-sm: .88rem
+    header-sm: .88rem,
+    social-sm: .85rem,
+    social-mb-md: .9rem,
+    headers-mb-lg: 1.4rem
 );
 
 
-// tablets
+//iphone widths
+$iphone5: 320px;
+$galaxyS10: 360px;
+$iphone11: 414px;
+$galaxyFold2:884px;
+
 $laptop-width: 1024px;
 $laptop-l-width: 1440px;
 $laptop-xl-width: 1650px;
-$mobile-m:375px;
-$mobile-l:425px;
 $tablet-width: 728px;
 
 // Variables end 
@@ -27,18 +33,30 @@ $tablet-width: 728px;
 
 @mixin respond($breakpoint) {
 
-    @if $breakpoint==mobile_m {
-        @media (min-width: #{$mobile-m}) {
+    @if $breakpoint==iphone5 {
+        @media (min-width: #{$iphone5}) {
             @content;
         }
 
     }
-
-    @if $breakpoint==mobile_l {
-        @media (min-width: #{$mobile-l}) {
+    
+    @if $breakpoint==galaxyS10 {
+        @media (min-width: #{$galaxyS10}) {
             @content;
         }
 
+    }
+    @if $breakpoint==iphone11 {
+        @media (min-width: #{$iphone11}) {
+            @content;
+        }
+    
+    }
+    @if $breakpoint==galaxyFold2 {
+        @media (min-width: #{$galaxyFold2}) {
+            @content;
+        }
+    
     }
 
     @if $breakpoint==tablet {
@@ -295,6 +313,12 @@ section {
 .socials-link {
     color: map-get($colors, secondary);
     transition: ease-in 1s;
+    @include respond(iphone5) {
+        font-size: map-get($fonts, social-sm);
+    }
+    @include respond(iphone11) {
+        font-size: map-get($fonts, social-mb-md);
+    }
 }
 
 .site:hover {
@@ -334,155 +358,3 @@ section {
 // Footer End 
 
 
-// small mobile responsiveness
-
-body {
-
-    @include respond(tablet) {
-
-        .scrollToTop {
-            font-size: 2rem;
-        }
-
-        .intro-header,
-        .section-header-1,
-        .section-header-2 {
-            font-size: 1.5rem;
-        }
-
-        .message-ceo,
-        .service-description,
-        .learn-more-btn {
-            font-size: 1rem;
-        }
-
-        #products-and-services .section-header-1 {
-            padding-bottom: 4%;
-        }
-
-        .service-title {
-            padding-top: 3%;
-        }
-
-        .service-title,
-        .social-username {
-            font-size: 1.2rem;
-        }
-
-        .learn-more-btn {
-            padding-top: 6px;
-        }
-
-        .services-mobile {
-            padding: 5% 5% 0;
-        }
-
-        .social-media-icons {
-            font-size: 2rem;
-        }
-
-        .social-media-container {
-            padding-left: 29px;
-        }
-
-        #contact-us {
-            .section-header-1 {
-                padding-bottom: 7%;
-            }
-
-            .message-ceo-container {
-                padding-right: 0;
-                text-align: right;
-            }
-
-            .message-ceo {
-                font-size: 1.3rem;
-            }
-
-            .ceo-signature {
-                font-size: 1.4rem;
-            }
-        }
-
-        #footer {
-            .copy-right {
-                font-size: .9rem;
-            }
-        }
-    }
-
-    @include respond(laptop) {
-       
-        .social-username {
-            font-size: 1.45rem;
-        }
-
-        .section-header-1,
-        .section-header-2 {
-            font-size: 1.8rem;
-        }
-
-        .icons,
-        .next-btn,
-        .previous-btn {
-            font-size: 4rem;
-        }
-
-        #products-and-services {
-
-
-            .services-mobile {
-                padding: 6% 2% 0;
-            }
-
-            .service-title {
-                font-size: 1.3rem;
-                margin: 0;
-                padding-top: 4%;
-            }
-
-            .service-description,
-            .learn-more-btn {
-                font-size: 1.1rem;
-            }
-
-            .service-description {
-                margin: 0;
-                padding: 3% 0 6%;
-            }
-
-            .learn-more-btn {
-                width: 45%;
-                height: 15%;
-                padding-top: 6px;
-                transition: ease-out .7s;
-            }
-
-            .learn-more-btn:hover {
-                background-color: map-get($colors, secondary);
-                color: map-get($colors, primary);
-            }
-        }
-
-        #team {
-
-            .next-btn,
-            .previous-btn {
-                top: 45%;
-            }
-        }
-
-        #contact-us {
-            .message-ceo-container {
-
-                .message-ceo,
-                .ceo-signature {
-                    font-size: 2rem;
-                }
-            }
-        }
-    }
-
-}
-
-// small mobile responsiveness end

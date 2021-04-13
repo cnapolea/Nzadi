@@ -40,7 +40,7 @@ body .ScrollToTopShow {
 }
 
 #title {
-  height: 25%;
+  height: 40%;
   margin-bottom: 0;
   overflow: hidden;
   padding-top: 0;
@@ -85,11 +85,13 @@ body .ScrollToTopShow {
 
 #title nav .nav-item {
   text-align: right;
+  margin-right: 1.3%;
 }
 
 #title nav .nav-link {
   color: #F3C623;
   font-size: .8rem;
+  margin-right: 1.1%;
   padding: 1%  3% 2% 0;
 }
 
@@ -131,17 +133,11 @@ body .ScrollToTopShow {
 }
 
 #title nav .navbar-nav {
+  background-color: transparent;
   margin-top: 5px;
   position: relative;
-  z-index: 1;
   white-space: nowrap;
-  background-color: transparent;
-}
-
-@media (min-width: 1024px) {
-  #title nav .nav-item {
-    margin-right: 1.1%;
-  }
+  z-index: 1;
 }
 
 @media (min-width: 1440px) {
@@ -176,8 +172,8 @@ body .ScrollToTopShow {
 }
 
 #title .intro-header {
-  font-size: 1rem;
-  top: 52%;
+  font-size: 0.88rem;
+  top: 48%;
   position: absolute;
   right: 5%;
   z-index: 2;
@@ -204,27 +200,48 @@ body .ScrollToTopShow {
   z-index: 2;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   #title {
-    height: 34%;
+    height: 50%;
+  }
+}
+
+@media (min-width: 360px) {
+  #title {
+    height: 40%;
+  }
+  #title .bg-video {
+    top: 13%;
+  }
+}
+
+@media (min-width: 414px) {
+  #title {
+    height: 40%;
+  }
+  #title .bg-video {
+    top: 8%;
+  }
+  #title .intro-header {
+    top: 55%;
   }
 }
 
 @media (min-width: 728px) {
   #title {
-    height: 55%;
+    height: 57%;
   }
   #title .bg-video {
-    top: 11%;
+    top: 7%;
   }
 }
 
 @media (min-width: 1024px) {
   #title {
-    height: 55%;
+    height: 100%;
   }
   #title .bg-video {
-    top: 8%;
+    top: 5%;
   }
   #title .intro-header {
     font-size: 2rem;
@@ -233,13 +250,13 @@ body .ScrollToTopShow {
 
 @media (min-width: 1440px) {
   #title {
-    height: 100%;
+    height: 107%;
   }
 }
 
 @media (min-width: 1650px) {
   #title {
-    height: 100%;
+    height: 122%;
   }
   #title .bg-video {
     top: 5%;
@@ -294,7 +311,7 @@ body .ScrollToTopShow {
 
 .section-header-1,
 .section-header-2 {
-  font-size: 1rem;
+  font-size: 0.88rem;
 }
 
 .intro-header,
@@ -423,6 +440,18 @@ section {
   transition: ease-in 1s;
 }
 
+@media (min-width: 320px) {
+  .socials-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 414px) {
+  .socials-link {
+    font-size: 0.9rem;
+  }
+}
+
 .site:hover {
   color: #0000008c;
   cursor: pointer;
@@ -449,109 +478,5 @@ section {
   font-size: .7rem;
   margin-bottom: 0;
   padding: 1%;
-}
-
-@media (min-width: 728px) {
-  body .scrollToTop {
-    font-size: 2rem;
-  }
-  body .intro-header,
-  body .section-header-1,
-  body .section-header-2 {
-    font-size: 1.5rem;
-  }
-  body .message-ceo,
-  body .service-description,
-  body .learn-more-btn {
-    font-size: 1rem;
-  }
-  body #products-and-services .section-header-1 {
-    padding-bottom: 4%;
-  }
-  body .service-title {
-    padding-top: 3%;
-  }
-  body .service-title,
-  body .social-username {
-    font-size: 1.2rem;
-  }
-  body .learn-more-btn {
-    padding-top: 6px;
-  }
-  body .services-mobile {
-    padding: 5% 5% 0;
-  }
-  body .social-media-icons {
-    font-size: 2rem;
-  }
-  body .social-media-container {
-    padding-left: 29px;
-  }
-  body #contact-us .section-header-1 {
-    padding-bottom: 7%;
-  }
-  body #contact-us .message-ceo-container {
-    padding-right: 0;
-    text-align: right;
-  }
-  body #contact-us .message-ceo {
-    font-size: 1.3rem;
-  }
-  body #contact-us .ceo-signature {
-    font-size: 1.4rem;
-  }
-  body #footer .copy-right {
-    font-size: .9rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  body .social-username {
-    font-size: 1.45rem;
-  }
-  body .section-header-1,
-  body .section-header-2 {
-    font-size: 1.8rem;
-  }
-  body .icons,
-  body .next-btn,
-  body .previous-btn {
-    font-size: 4rem;
-  }
-  body #products-and-services .services-mobile {
-    padding: 6% 2% 0;
-  }
-  body #products-and-services .service-title {
-    font-size: 1.3rem;
-    margin: 0;
-    padding-top: 4%;
-  }
-  body #products-and-services .service-description,
-  body #products-and-services .learn-more-btn {
-    font-size: 1.1rem;
-  }
-  body #products-and-services .service-description {
-    margin: 0;
-    padding: 3% 0 6%;
-  }
-  body #products-and-services .learn-more-btn {
-    width: 45%;
-    height: 15%;
-    padding-top: 6px;
-    -webkit-transition: ease-out .7s;
-    transition: ease-out .7s;
-  }
-  body #products-and-services .learn-more-btn:hover {
-    background-color: #000;
-    color: #F3C623;
-  }
-  body #team .next-btn,
-  body #team .previous-btn {
-    top: 45%;
-  }
-  body #contact-us .message-ceo-container .message-ceo,
-  body #contact-us .message-ceo-container .ceo-signature {
-    font-size: 2rem;
-  }
 }
 /*# sourceMappingURL=main.css.map */
