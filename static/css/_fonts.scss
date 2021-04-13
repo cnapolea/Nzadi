@@ -1,0 +1,99 @@
+body {
+    font-family: "Montserrat";
+}
+
+
+.intro-header, .navbar-brand {
+    font-size: map-get($fonts, header-sm);
+    
+    
+    @include respond(redmiNote9Pro) {
+        font-size: map-get($fonts, header-sm-2);
+    }
+
+    @include respond(galaxyFold2) {
+        font-size: map-get($fonts, header-mb-lg);
+    }
+}
+
+.nav-link {
+    font-size: map-get($fonts, nav-mb-sm);
+
+    @include respond(redmiNote9Pro) {
+        font-size: map-get($fonts, nav-mb-md);
+    }
+
+    @include respond(galaxyFold2) {
+        font-size: map-get($fonts, header-mb-md);
+    }
+}
+
+.nav-notification {
+    font-size: map-get($fonts, notif-mb-sm);
+
+    @include respond(galaxyFold2) {
+        font-size: map-get($fonts, social-mb-md);
+    }
+}
+
+.section-header-1, .section-header-2 {
+    font-size: map-get($fonts, header-mb-md);
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    @include respond(galaxyFold2) {
+        font-size: map-get($fonts, header-mb-lg-2);
+    }
+}
+
+.icons{
+    font-size: map-get($fonts, icon-mb-sm);
+    
+    @include respond(galaxyFold2) {
+        font-size: map-get($fonts, icon-mb-lg);
+    }
+}
+
+.service-title , .learn-more-btn {
+    font-size: map-get($fonts, header-sm-2);
+
+    @include respond(galaxyFold2) {
+        font-size: map-get($fonts, header-mb-lg);
+    }
+}
+
+.previous-btn,
+.next-btn {
+    font-size: 3rem;
+}
+
+.navbar-brand, .service-title, .message-ceo {
+    font-weight: 600;
+}
+
+.social-username, .copy-right {
+    font-size: map-get($fonts, social-sm);
+    
+    @include respond(iphone11) {
+        font-size: map-get($fonts, header-sm);
+        font-weight: 500;
+    }
+
+    @include respond(redmiNote9Pro) {
+        font-size: map-get($fonts, header-sm);
+        font-weight: 500;
+    }
+}
+
+
+.ceo-signature {
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+}
+
+.service-description, .social-username, .copy-right {
+
+    @include respond(galaxyFold2) {
+        font-size: map-get($fonts, desc-mb-lg);
+    }
+}

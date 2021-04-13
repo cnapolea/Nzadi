@@ -10,7 +10,6 @@
     padding-top: 0;
     
     .intro-header {
-        font-size: map-get($fonts, header-sm);
         top: 48%;
         position: absolute;
         right: 5%;
@@ -50,6 +49,11 @@
         }
     }
 
+
+    @include respond(redmiNote9Pro) {
+        height: 44%;
+    }
+
     @include respond(iphone11) {
         height: 40%;
         
@@ -61,43 +65,15 @@
             top: 55%;
         }
     }
-
-
-    @include respond(mobile_l) {
-        height: 35%;
+    @include respond(galaxyTablet) {
+        height: 50%;
+       
     }
 
-    @include respond(tablet) {
-        height: 57%;
 
-        .bg-video {
-            top: 7%;
-        }
-    }
 
-    @include respond(laptop) {
-        height: 100%;
-        
-        
-        .bg-video {
-            top: 5%;
-        }
-
-        .intro-header {
-            font-size: 2rem;
-        }
-    }
-
-    @include respond(laptop_l) {
-        height: 107%;
-    }
-
-    @include respond(laptop_xl) {
-        height: 122%;
-
-        .bg-video {
-            top: 5%;
-        }
+    @include respond(galaxyFold2) {
+        height: 60%;
     }
 
 }

@@ -6,26 +6,41 @@ $colors: (primary: #F3C623,
     notification: red);
 
 $fonts: (
-    font-a-laptop: 1.1rem,
-    notification: .8rem,
-    header-sm: .88rem,
-    social-sm: .85rem,
+
+    // header fonts
+    header-sm: 1rem,
+    header-sm-2: 1.1rem,
+    header-mb-md: 1.2rem,
+    header-mb-lg: 1.5rem,
+    header-mb-lg-2: 1.7rem,
+
+    // description
+    desc-mb-lg: 1.3rem,
+    
+    // link fonts
+    notif-mb-sm: .6rem,
+    nav-mb-sm: .8rem,
+    nav-mb-md: .95rem,
+    social-sm: .8rem,
     social-mb-md: .9rem,
-    headers-mb-lg: 1.4rem
+    font-a-laptop: 1.1rem,
+
+    // icon
+    icon-mb-sm: 2.5rem,
+    icon-mb-lg: 4rem,
 );
 
 
-//iphone widths
+//mobile widths
 $iphone5: 320px;
 $galaxyS10: 360px;
+$redmiNote9Pro: 390px;
 $iphone11: 414px;
 $galaxyFold2:884px;
 
-$laptop-width: 1024px;
-$laptop-l-width: 1440px;
-$laptop-xl-width: 1650px;
-$tablet-width: 728px;
 
+// tablet widths
+$galaxyTablet:820px;
 // Variables end 
 
 
@@ -46,12 +61,27 @@ $tablet-width: 728px;
         }
 
     }
+    
+    @if $breakpoint==redmiNote9Pro {
+        @media (min-width: #{$redmiNote9Pro}) {
+            @content;
+        }
+    }
+
     @if $breakpoint==iphone11 {
         @media (min-width: #{$iphone11}) {
             @content;
         }
     
     }
+
+    @if $breakpoint==galaxyTablet {
+        @media (min-width: #{$galaxyTablet}) {
+            @content;
+        }
+    
+    }
+    
     @if $breakpoint==galaxyFold2 {
         @media (min-width: #{$galaxyFold2}) {
             @content;
@@ -59,30 +89,6 @@ $tablet-width: 728px;
     
     }
 
-    @if $breakpoint==tablet {
-        @media (min-width: #{$tablet-width}) {
-            @content;
-        }
-
-    }
-
-    @if $breakpoint==laptop {
-        @media (min-width: #{$laptop-width}) {
-            @content;
-        }
-    }
-
-    @if $breakpoint==laptop_l {
-        @media (min-width: #{$laptop-l-width}) {
-            @content;
-        }
-    }
-
-    @if $breakpoint==laptop_xl {
-        @media (min-width: #{$laptop-xl-width}) {
-            @content;
-        }
-    }
 
 }
 
@@ -100,7 +106,6 @@ html {
 }
 
 body {
-    font-family: "Montserrat";
     margin: 0;
     padding: 0;
 
@@ -131,10 +136,10 @@ body {
     
 }
 
-// Title Section Start
-@import './title';
-// Title Section End
 
+
+
+// buttons stylying
 @import './buttons';
 
 // Animation
@@ -144,25 +149,6 @@ body {
 }
 
 
-// Similar font sizes
-.section-header-1,
-.section-header-2 {
-    font-size: map-get($fonts, header-sm);
-}
-
-.intro-header,
-.icons,
-.service-title,
-.learn-more-btn {
-    font-size: .9rem;
-}
-
-.message-ceo,
-.service-description {
-    font-size: .8rem;
-}
-
-// Similar font sizes end
 
 
 // width 100% 
@@ -225,8 +211,6 @@ section {
 
 .section-header-1,
 .section-header-2 {
-    font-weight: 900;
-    letter-spacing: 2px;
     padding: 5% 0px 6% 3%;
     margin: 0;
 }
@@ -237,7 +221,6 @@ section {
 
 .service-title {
     padding-top: 5%;
-    font-weight: 600;
 }
 
 
@@ -313,12 +296,6 @@ section {
 .socials-link {
     color: map-get($colors, secondary);
     transition: ease-in 1s;
-    @include respond(iphone5) {
-        font-size: map-get($fonts, social-sm);
-    }
-    @include respond(iphone11) {
-        font-size: map-get($fonts, social-mb-md);
-    }
 }
 
 .site:hover {
@@ -333,23 +310,16 @@ section {
 }
 
 .message-ceo {
-    font-weight: 900;
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
-.ceo-signature {
-    font-family: 'Cookie', cursive;
-    font-size: 20px;
-    font-weight: 100;
-}
 
 //Contact Us Section End
 
 //Footer Start
 #footer {
     .copy-right {
-        font-size: .7rem;
         margin-bottom: 0;
         padding: 1%;
     }
@@ -358,3 +328,9 @@ section {
 // Footer End 
 
 
+// Fonts
+@import './fonts';
+// Title Section 
+
+@import './title';
+// Title Section End
