@@ -65,15 +65,19 @@
             top: 55%;
         }
     }
-    @include respond(galaxyTablet) {
+
+    @include respond(Tablet) {
         height: 50%;
        
     }
 
-
-
     @include respond(galaxyFold2) {
         height: 60%;
+    }
+
+    @include respond(Tablet_2) {
+        height: 100%;
+       
     }
 
 }

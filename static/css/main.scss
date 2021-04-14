@@ -13,6 +13,7 @@ $fonts: (
     header-mb-md: 1.2rem,
     header-mb-lg: 1.5rem,
     header-mb-lg-2: 1.7rem,
+    header-tb-sm: 2rem,
 
     // description
     desc-mb-lg: 1.3rem,
@@ -28,6 +29,10 @@ $fonts: (
     // icon
     icon-mb-sm: 2.5rem,
     icon-mb-lg: 4rem,
+    icon-tb-sm: 7rem,
+
+    // arrows
+    arrows-tb-sm:8rem,
 );
 
 
@@ -40,7 +45,8 @@ $galaxyFold2:884px;
 
 
 // tablet widths
-$galaxyTablet:820px;
+$Tablet:820px;
+$Tablet-2:1180px;
 // Variables end 
 
 
@@ -75,8 +81,8 @@ $galaxyTablet:820px;
     
     }
 
-    @if $breakpoint==galaxyTablet {
-        @media (min-width: #{$galaxyTablet}) {
+    @if $breakpoint==Tablet {
+        @media (min-width: #{$Tablet}) {
             @content;
         }
     
@@ -84,6 +90,13 @@ $galaxyTablet:820px;
     
     @if $breakpoint==galaxyFold2 {
         @media (min-width: #{$galaxyFold2}) {
+            @content;
+        }
+    
+    }
+
+    @if $breakpoint==Tablet_2 {
+        @media (min-width: #{$Tablet}) {
             @content;
         }
     

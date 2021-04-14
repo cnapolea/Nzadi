@@ -228,6 +228,12 @@ body {
   }
 }
 
+@media (min-width: 820px) {
+  .intro-header, .navbar-brand {
+    font-size: 1.7rem;
+  }
+}
+
 @media (min-width: 884px) {
   .intro-header, .navbar-brand {
     font-size: 1.5rem;
@@ -250,6 +256,12 @@ body {
   }
 }
 
+@media (min-width: 820px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
 .nav-notification {
   font-size: 0.6rem;
 }
@@ -260,10 +272,22 @@ body {
   }
 }
 
+@media (min-width: 820px) {
+  .nav-notification {
+    font-size: 0.8rem;
+  }
+}
+
 .section-header-1, .section-header-2 {
   font-size: 1.2rem;
   font-weight: 900;
   letter-spacing: 2px;
+}
+
+@media (min-width: 820px) {
+  .section-header-1, .section-header-2 {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 884px) {
@@ -276,14 +300,26 @@ body {
   font-size: 2.5rem;
 }
 
-@media (min-width: 884px) {
+@media (min-width: 820px) {
   .icons {
     font-size: 4rem;
   }
 }
 
+@media (min-width: 820px) {
+  .icons {
+    font-size: 7rem;
+  }
+}
+
 .service-title, .learn-more-btn {
   font-size: 1.1rem;
+}
+
+@media (min-width: 820px) {
+  .service-title, .learn-more-btn {
+    font-size: 1.7rem;
+  }
 }
 
 @media (min-width: 884px) {
@@ -299,6 +335,12 @@ body {
 
 .navbar-brand, .service-title, .message-ceo {
   font-weight: 600;
+}
+
+@media (min-width: 820px) {
+  .previous-btn, .next-btn {
+    font-size: 8rem;
+  }
 }
 
 .social-username, .copy-right {
@@ -324,8 +366,32 @@ body {
   font-weight: 100;
 }
 
+@media (min-width: 820px) {
+  .service-description, .social-username, .copy-right {
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-width: 884px) {
   .service-description, .social-username, .copy-right {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 820px) {
+  .service-description, .social-username, .copy-right {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 820px) {
+  .message-ceo, .ceo-signature {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 820px) {
+  .social-media-icons {
     font-size: 1.3rem;
   }
 }
@@ -381,7 +447,7 @@ body {
   height: 1.2rem;
 }
 
-@media (min-width: 884px) {
+@media (min-width: 820px) {
   #title nav .navbar-toggler-icon {
     height: 2rem;
   }
@@ -402,6 +468,13 @@ body {
 
 #title nav .navbar-collapse {
   background-color: black;
+}
+
+@media (min-width: 820px) {
+  #title nav .navbar-collapse {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 #title nav .row {
@@ -481,6 +554,12 @@ body {
 @media (min-width: 884px) {
   #title {
     height: 60%;
+  }
+}
+
+@media (min-width: 820px) {
+  #title {
+    height: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
