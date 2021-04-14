@@ -5,9 +5,7 @@ $colors: (primary: #F3C623,
     dropdown-color:#393738,
     notification: red);
 
-$fonts: (
-
-    // header fonts
+$fonts: ( // header fonts
     header-sm: 1rem,
     header-sm-2: 1.1rem,
     header-mb-md: 1.2rem,
@@ -19,7 +17,7 @@ $fonts: (
 
     // description
     desc-mb-lg: 1.3rem,
-    
+
     // link fonts
     notif-mb-sm: .6rem,
     nav-mb-sm: .8rem,
@@ -68,14 +66,14 @@ $inch_24:1826px;
         }
 
     }
-    
+
     @if $breakpoint==galaxyS10 {
         @media (min-width: #{$galaxyS10}) {
             @content;
         }
 
     }
-    
+
     @if $breakpoint==redmiNote9Pro {
         @media (min-width: #{$redmiNote9Pro}) {
             @content;
@@ -86,28 +84,28 @@ $inch_24:1826px;
         @media (min-width: #{$iphone11}) {
             @content;
         }
-    
+
     }
 
     @if $breakpoint==Tablet {
         @media (min-width: #{$Tablet}) {
             @content;
         }
-    
+
     }
-    
+
     @if $breakpoint==galaxyFold2 {
         @media (min-width: #{$galaxyFold2}) {
             @content;
         }
-    
+
     }
 
     @if $breakpoint==Tablet_2 {
         @media (min-width: #{$Tablet}) {
             @content;
         }
-    
+
     }
 
     @if $breakpoint==air {
@@ -166,13 +164,13 @@ body {
         transform: translateX(180%);
         z-index: 2;
     }
-    
+
     .ScrollToTopShow {
         transform: translateX(0%);
     }
-    
-    
-    
+
+
+
 }
 
 
@@ -262,10 +260,6 @@ section {
     padding-top: 5%;
 }
 
-
-
-
-
 // Products & Servies Section Start
 
 #products-and-services {
@@ -277,8 +271,6 @@ section {
     border-radius: 50%;
     border: map-get($colors, primary) 1px solid;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
-
-
 }
 
 // Products & Servies Section End
