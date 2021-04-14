@@ -22,6 +22,18 @@
         position: absolute;
         top: 15%;
         z-index: 1;
+
+        @include respond(galaxyS10) {
+            top: 13%;
+        }
+
+        @include respond(iphone11) {
+            top: 8%;
+        }
+
+        @include respond(inch24) {
+            top: 5%;
+        }
     }
 
 
@@ -44,9 +56,6 @@
     @include respond(galaxyS10) {
         height: 40%;
         
-        .bg-video {
-            top: 13%;
-        }
     }
 
 
@@ -57,10 +66,6 @@
     @include respond(iphone11) {
         height: 40%;
         
-        .bg-video {
-            top: 8%;
-        }
-
         .intro-header {
             top: 55%;
         }
@@ -78,6 +83,14 @@
     @include respond(Tablet_2) {
         height: 100%;
        
+    }
+
+    @include respond(air) {
+        height: 110%;
+    }
+
+    @include respond(inch24) {
+        height: 125%;
     }
 
 }

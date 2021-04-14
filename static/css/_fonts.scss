@@ -20,6 +20,10 @@ body {
     
     }
 
+    @include respond(inch24) {
+        font-size: map-get($fonts, header-tb-sm);
+    }
+
 }
 
 .nav-link {
@@ -35,6 +39,10 @@ body {
 
     @include respond(Tablet_2) {
         font-size: map-get($fonts, header-sm);
+    }
+
+    @include respond(inch24) {
+        font-size: map-get($fonts, header-mb-lg);
     }
 }
 
@@ -61,6 +69,10 @@ body {
 
     @include respond(galaxyFold2) {
         font-size: map-get($fonts, header-mb-lg-2);
+    }
+
+    @include respond(inch24) {
+        font-size: map-get($fonts, header-lp-lg);
     }
 }
 
@@ -139,11 +151,15 @@ body {
     @include respond(Tablet_2) {
         font-size: map-get($fonts, font-a-laptop);
     }
+
+    @include respond(inch24) {
+        font-size: map-get($fonts, header-mb-lg);
+    }
 }
 
 .message-ceo, .ceo-signature {
     @include respond(Tablet_2) {
-        font-size: map-get($fonts, header-mb-lg);
+        font-size: map-get($fonts, header-mb-lg-2);
     }
 }
 

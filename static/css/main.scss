@@ -14,6 +14,8 @@ $fonts: (
     header-mb-lg: 1.5rem,
     header-mb-lg-2: 1.7rem,
     header-tb-sm: 2rem,
+    header-lp-lg: 2.2rem,
+
 
     // description
     desc-mb-lg: 1.3rem,
@@ -47,6 +49,12 @@ $galaxyFold2:884px;
 // tablet widths
 $Tablet:820px;
 $Tablet-2:1180px;
+
+// laptops widths
+$macbookAir:1280px;
+$inch-15:1366px;
+$inch_24:1826px;
+
 // Variables end 
 
 
@@ -100,6 +108,24 @@ $Tablet-2:1180px;
             @content;
         }
     
+    }
+
+    @if $breakpoint==air {
+        @media (min-width: #{$macbookAir}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==inch15 {
+        @media (min-width: #{$inch-15}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==inch24 {
+        @media (min-width: #{$inch_24}) {
+            @content;
+        }
     }
 
 

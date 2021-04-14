@@ -240,6 +240,12 @@ body {
   }
 }
 
+@media (min-width: 1826px) {
+  .intro-header, .navbar-brand {
+    font-size: 2rem;
+  }
+}
+
 .nav-link {
   font-size: 0.8rem;
 }
@@ -259,6 +265,12 @@ body {
 @media (min-width: 820px) {
   .nav-link {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 1826px) {
+  .nav-link {
+    font-size: 1.5rem;
   }
 }
 
@@ -293,6 +305,12 @@ body {
 @media (min-width: 884px) {
   .section-header-1, .section-header-2 {
     font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1826px) {
+  .section-header-1, .section-header-2 {
+    font-size: 2.2rem;
   }
 }
 
@@ -384,9 +402,15 @@ body {
   }
 }
 
+@media (min-width: 1826px) {
+  .service-description, .social-username, .copy-right {
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-width: 820px) {
   .message-ceo, .ceo-signature {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -500,6 +524,24 @@ body {
   z-index: 1;
 }
 
+@media (min-width: 360px) {
+  #title .bg-video {
+    top: 13%;
+  }
+}
+
+@media (min-width: 414px) {
+  #title .bg-video {
+    top: 8%;
+  }
+}
+
+@media (min-width: 1826px) {
+  #title .bg-video {
+    top: 5%;
+  }
+}
+
 #title .navbar-scroll-up,
 #title .navbar-scroll-down {
   -webkit-transform: translateY(-500px);
@@ -522,9 +564,6 @@ body {
   #title {
     height: 40%;
   }
-  #title .bg-video {
-    top: 13%;
-  }
 }
 
 @media (min-width: 390px) {
@@ -536,9 +575,6 @@ body {
 @media (min-width: 414px) {
   #title {
     height: 40%;
-  }
-  #title .bg-video {
-    top: 8%;
   }
   #title .intro-header {
     top: 55%;
@@ -560,6 +596,18 @@ body {
 @media (min-width: 820px) {
   #title {
     height: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  #title {
+    height: 110%;
+  }
+}
+
+@media (min-width: 1826px) {
+  #title {
+    height: 125%;
   }
 }
 /*# sourceMappingURL=main.css.map */
